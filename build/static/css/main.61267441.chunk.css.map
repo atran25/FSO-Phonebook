@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,OAEI,wBAAqB,CACrB,aAAc,CACd,wBAAyB,CACzB,cACJ","file":"main.61267441.chunk.css","sourcesContent":[".error {\n    border: 2px solid;\n    border-color: #312F2F;\n    color: #312F2F;\n    background-color: #BF98A0;\n    font-size: 30px;\n}"]}
