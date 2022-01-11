@@ -7,7 +7,7 @@ console.log('connecting to ', url)
 
 mongoose
   .connect(url)
-  .then((result) => {
+  .then((result) => { // eslint-disable-line no-unused-vars
     console.log('connected to MongoDB')
   })
   .catch((error) => {

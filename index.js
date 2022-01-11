@@ -8,8 +8,8 @@ const app = express()
 app.use(express.static('build'))
 app.use(express.json())
 
-morgan.token('post', (req, res) => {
-  // console.log(req);
+morgan.token('post', (req, res) => { // eslint-disable-line no-unused-vars
+  // console.log(req)
   const data = JSON.stringify(req.body)
   console.log(data)
   return data
@@ -17,35 +17,6 @@ morgan.token('post', (req, res) => {
 app.use(
   morgan(':method :url :status :res[content-length] - :response-time ms :post')
 )
-
-// let phonebook = [
-//   {
-//     id: 1,
-//     name: "Arto Hellas",
-//     number: "040-123456",
-//   },
-//   {
-//     id: 2,
-//     name: "Ada Lovelace",
-//     number: "39-44-5323523",
-//   },
-//   {
-//     id: 3,
-//     name: "Dan Abramov",
-//     number: "12-43-234345",
-//   },
-//   {
-//     id: 4,
-//     name: "Mary Poppendieck",
-//     number: "39-23-6423122",
-//   },
-// ];
-
-// const generateId = () => {
-//   min = Math.ceil(phonebook.length + 1);
-//   max = Math.floor(1000);
-//   return Math.floor(Math.random() * (max - min) + min);
-// };
 
 app.get('/info', (req, res) => {
   const currentTime = new Date()
@@ -82,7 +53,7 @@ app.get('/api/persons/:id', (req, res, next) => {
 app.delete('/api/persons/:id', (req, res, next) => {
   const id = req.params.id
   Person.findByIdAndRemove(id)
-    .then((result) => {
+    .then((result) => { // eslint-disable-line no-unused-vars
       res.status(204).end()
     })
     .catch((error) => {
@@ -110,7 +81,7 @@ app.post('/api/persons', (req, res, next) => {
 
   newPerson
     .save()
-    .then((result) => {
+    .then((result) => { // eslint-disable-line no-unused-vars
       console.log('new person added')
       res.json(newPerson)
     })
