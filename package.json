@@ -10,11 +10,13 @@
     "build:ui": "rm -rf build && cd ../../phonebook/ && npm run build && cp -r build ../part3/3a",
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "author": "Anthony tran",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^8.6.0",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
